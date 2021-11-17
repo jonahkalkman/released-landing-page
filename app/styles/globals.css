@@ -16,3 +16,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h1 {
+  font-size: 30px;
+}
+
+@font-face {
+  font-family: "MontserratSemiBold";
+  src: url("../fonts//Montserrat-SemiBold.woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
