@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 import Nav from '../components/nav'
 import Hero from '../components/hero'
+import Intro from '../components/intro'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <Nav />
         <Hero />
+        <Intro />
       </main>
 
       <footer className={styles.footer}>
