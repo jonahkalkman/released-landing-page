@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'next/image';
-import globalStyles from './styles.js';
+import styles from './styles.js';
 
 export default function Intro() {
 
@@ -10,10 +10,10 @@ export default function Intro() {
       <h2>Released, is your <span className="intro__green">release</span> radar</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus sed neque fringilla bibendum. Sed sit amet accumsan augue. Duis augue quam, dapibus at tellus vitae, tincidunt semper.</p>
       <div className="intro__image">
-        <Image src="/notification.svg" width="300" height="93" objectFit="contain" />
+        <Image src="/notification.svg" width="270" height="93" objectFit="contain" />
       </div>
-      <style jsx global>
-        {globalStyles}
+      <style jsx>
+        {styles}
       </style>
     </div>
   )

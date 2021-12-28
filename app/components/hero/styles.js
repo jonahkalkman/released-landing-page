@@ -13,4 +13,8 @@ export default css.global`
   .hero__title span {
     color: #48C993;
   }
+
+  .hero__image {
+    z-index: 2;
+  }
 `

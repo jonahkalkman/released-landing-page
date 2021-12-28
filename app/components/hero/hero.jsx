@@ -7,7 +7,9 @@ export default function Hero() {
       <h1 className="hero__title">
         New <span>Music</span><br></br> Get Notified
       </h1>
-      <Image src="/phone.png" width="600" height="800" objectFit="contain" />
+      <div className="hero__image">
+        <Image src="/phone.png" width="600" height="800" objectFit="contain" />
+      </div>
       <style jsx global>
         {globalStyles}
       </style>
