@@ -1,21 +1,39 @@
+import React, { useRef, useEffect }  from "react";
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import { gsap } from "gsap";
+
 
 import Nav from '../components/nav'
 import Hero from '../components/hero'
 import Intro from '../components/intro'
 import SliderComp from '../components/slider'
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 
 export default function Home() {
+  const firstCircle = useRef();
+  const secondCircle = useRef();
+
+  useEffect(() => {
+    const t = gsap.timeline();
+
+    t.from([firstCircle.current, secondCircle.current], {  
+      opacity: 0,
+      delay: 1,
+      y: 30,
+      duration: 2,
+    });
+  });
+
   return (
     <Parallax
         bgImage="/path/to/another/image"
         renderLayer={percentage => (
           <div>
             <div
+              ref={firstCircle}
               style={{
                 position: "absolute",
                 background: 'linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%)',
@@ -27,16 +45,19 @@ export default function Home() {
                 zIndex: 1
               }}
             />
-            <div style={{
-              position: 'absolute',
-              right: '-40px',
-              top: 850 - (percentage * 400),
-              borderRadius: "50%",
-              width: 185,
-              height: 185,
-              background: 'linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%)',
-              transform: 'rotate(73.92deg)'
-            }} />
+            <div 
+              ref={secondCircle}
+              style={{
+                position: 'absolute',
+                right: '-40px',
+                top: 850 - (percentage * 400),
+                borderRadius: "50%",
+                width: 185,
+                height: 185,
+                background: 'linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%)',
+                transform: 'rotate(73.92deg)'
+              }}
+            />
             <div style={{
               position: 'absolute',
               left: '-40px',

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import { CSSTransition } from 'react-transition-group';
 import globalStyles from './styles.js';
 import Hamburger from '../hamburger'
+import { gsap } from "gsap";
 
 export default function Nav() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -16,15 +17,29 @@ export default function Nav() {
     }
   };
 
-  const nodeRef = React.useRef(null);
-  const newRef = React.useRef(null);
-  const menuItemRef = React.useRef(null);
+  const logoRef = React.useRef();
+  const menuRef = React.useRef();
+  const nodeRef = React.useRef();
+  const newRef = React.useRef();
+  const menuItemRef = React.useRef();
+
+  useEffect(() => {
+    gsap.from([logoRef.current, menuRef.current], {  
+      opacity: 0,
+      y: '10',
+      duration: 1.5
+    });
+  });
 
   return (
     <nav className='c-nav'>
-      <Image src="/logo.svg" alt="Vercel Logo" width={120} height={40} objectFit="contain" />
+      <span ref={logoRef}>
+        <Image src="/logo.svg" alt="Released logo" width={120} height={40} objectFit="contain" />
+      </span>
       <span className="c-menu" onClick={toggleMenu}>
-        {/* <Image className="menu__open-icon" src="/hamburger.svg" alt="Open menu icon" width={22} height={18} /> */}
+        <span ref={menuRef}>
+          <Image className="menu__open-icon" src="/hamburger.svg" alt="Open menu icon" width={22} height={18} />
+        </span>
         <Hamburger />
         <CSSTransition
          in={openMenu}
