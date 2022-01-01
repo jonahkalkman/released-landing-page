@@ -1,7 +1,9 @@
 import React, { useRef, useEffect }  from "react";
 import Image from 'next/image';
-import globalStyles from './styles.js';
 import { gsap } from "gsap";
+import globalStyles from './styles.js';
+
+import Form from "../form/form.jsx";
 
 export default function Hero() {
   const titleRef = useRef();
@@ -27,6 +29,7 @@ export default function Hero() {
       <h1 className="hero__title" ref={titleRef}>
         New <span>Music</span><br></br> Get Notified
       </h1>
+      <Form />
       <div className="hero__image" ref={imageRef}> 
         <Image src="/phone.png" width="600" height="800" objectFit="contain" />
       </div>

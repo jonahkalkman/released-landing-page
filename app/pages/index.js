@@ -10,7 +10,7 @@ import Hero from '../components/hero'
 import Intro from '../components/intro'
 import SliderComp from '../components/slider'
 import { Parallax } from 'react-parallax';
-
+import Footer from "../components/footer";
 
 export default function Home() {
   const firstCircle = useRef();
@@ -38,7 +38,7 @@ export default function Home() {
                 position: "absolute",
                 background: 'linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%)',
                 left: '-40px',
-                top: percentage * 200,
+                top: percentage * 300,
                 borderRadius: "50%",
                 width: 140,
                 height: 140,
@@ -95,14 +95,8 @@ export default function Home() {
           <Intro />
           <SliderComp />
         </main>
-
-        <footer className={styles.footer}>
-          <Link
-            href="\terms"
-          >
-            Terms and conditions
-          </Link>
-        </footer>
+        
+        <Footer />
       </div>
     </Parallax>
   )

@@ -10,18 +10,16 @@ export default function Nav() {
   const [isTransitioned, setIsTransitioned] = useState(false);
   const [navIsTransitioned, setNavIsTransitioned] = useState(false);
 
+  const logoRef = React.useRef();
+  const menuRef = React.useRef();
+  const nodeRef = React.useRef();
+  const newRef = React.useRef();
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
     if(openMenu == false) {
       setIsTransitioned(false);
     }
   };
-
-  const logoRef = React.useRef();
-  const menuRef = React.useRef();
-  const nodeRef = React.useRef();
-  const newRef = React.useRef();
-  const menuItemRef = React.useRef();
 
   useEffect(() => {
     gsap.from([logoRef.current, menuRef.current], {  

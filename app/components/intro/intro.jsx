@@ -9,6 +9,7 @@ export default function Intro() {
   const logoRef = useRef();
   const titleRef = useRef();
   const textRef = useRef();
+  const imageRef = useRef();
 
   useEffect(() => {
     gsap.from(logoRef.current, {
@@ -37,6 +38,15 @@ export default function Intro() {
         trigger: textRef.current,   
       }
     });
+
+    gsap.from(imageRef.current, {
+      opacity: 0,
+      y: '20',
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: imageRef.current,   
+      }
+    });
   });
 
   return (
@@ -46,7 +56,7 @@ export default function Intro() {
       </div>
       <h2 ref={titleRef}>Released, is your <span className="intro__green">release</span> radar</h2>
       <p ref={textRef}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus sed neque fringilla bibendum. Sed sit amet accumsan augue. Duis augue quam, dapibus at tellus vitae, tincidunt semper.</p>
-      <div className="intro__image">
+      <div className="intro__image" ref={imageRef}>
         <Image src="/notification.svg" width="270" height="93" objectFit="contain" />
       </div>
       <style jsx>
