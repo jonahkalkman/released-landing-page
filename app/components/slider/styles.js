@@ -7,6 +7,11 @@ export default css.global`
     margin-top 36px;
   }
 
+  .slider__title {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
   .c-slider container {
     padding: 40px;
     background: #419be0;
@@ -17,8 +22,17 @@ export default css.global`
     text-align: center;
   }
 
+  .slider__item p {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
   .slick-slide img {
     margin: auto;
+    width: 300px;
+    height: 100%;
+    object-fit: contain;
   }
 
   .slick-dots {
@@ -57,5 +71,20 @@ export default css.global`
 
   .slick-dots li.slick-active button:before {
     color: #48C993;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .c-slider {
+      margin-top: 111px;
+    }
+
+    .slider__title {
+      text-align: center;
+    }
+
+    .slick-track {
+      display: flex;
+      gap: 40px;
+    }
   }
 `

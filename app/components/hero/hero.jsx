@@ -26,12 +26,15 @@ export default function Hero() {
 
   return (
     <div className='c-hero'>
-      <h1 className="hero__title" ref={titleRef}>
-        New <span>Music</span><br></br> Get Notified
-      </h1>
-      <Form />
+      <div className="hero__right">
+        <h1 className="hero__title" ref={titleRef}>
+          Get notified when new music is out
+        </h1>
+        <p>Sign up now to become an early member:</p>
+        <Form />
+      </div>
       <div className="hero__image" ref={imageRef}> 
-        <Image src="/phone.png" width="600" height="800" objectFit="contain" />
+        <img src="/homescreen.png" width="600" height="800"/>
       </div>
       <style jsx global>
         {globalStyles}

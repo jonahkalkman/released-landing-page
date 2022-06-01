@@ -23,24 +23,13 @@ export default function Footer() {
 
   return (
     <footer className="c-footer" ref={footerRef}>
+      <span className="footer__link">
+      © Released - Your music release radar
+      </span>
       <div className="footer__socials">
         <Image src="/instagram.svg" width="20" height="20" objectFit="contain" />
         <Image src="/twitter.svg" width="20" height="20" objectFit="contain" />
       </div>
-      <span className="footer__link">
-        <Link
-          href="\terms-and-conditions"
-        >
-          Terms and conditions
-        </Link>
-      </span>
-      <span className="footer__link">
-        <Link
-          href="\privacy-statement"
-        >
-          Privacy statement
-        </Link>
-      </span>
       <style jsx global>
         {globalStyles}
       </style>

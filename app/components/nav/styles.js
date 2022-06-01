@@ -104,4 +104,10 @@ export default css.global`
     right: 0px;
     padding: 1rem 1rem;
   }
+
+  @media only screen and (min-width: 768px) {
+    .c-nav {
+      justify-content: center;
+    }
+  }
 `

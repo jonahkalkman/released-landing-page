@@ -27,4 +27,23 @@ export default css.global`
     gap: 16px;
     margin: 0px 0px 13px 0px;
   }
+
+  @media only screen and (min-width: 768px) {
+    .c-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      margin-top: 200px;
+    }
+
+    .footer__socials {
+      margin: 0;
+      order: 2;
+    }
+
+    .footer__link {
+      color: #C4C4C4;
+    }
+  }
 `

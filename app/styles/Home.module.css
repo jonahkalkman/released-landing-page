@@ -2,6 +2,12 @@
   padding: 0 1rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 15rem;
+  }
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -9,6 +15,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.circle {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%);
+  left: -40px;
+  border-radius: 50%;
+  width: 140;
+  height: 140;
+  z-index: 1;
+} 
 
 .footer {
   display: flex;
@@ -103,6 +119,19 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.c-paralaxx-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%);
+}
+
+.c-paralaxx-circle--first {
+  left: -40px;
+  width: 140;
+  height: 140;
+  z-index: 1;
 }
 
 @media (max-width: 600px) {

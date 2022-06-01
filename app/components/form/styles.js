@@ -32,4 +32,55 @@ export default css.global`
     margin: 0 auto;
     margin-bottom: 20px;
   }
+
+  .form__button--active {
+    width: 117px;
+    height: 28px;
+  }
+
+  .form__checkmark {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    stroke-width: 3;
+    stroke: white;
+    stroke-miterlimit: 10;
+  }
+  
+  .checkmark__check {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .c-form form {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .form__input {
+      margin: 0;
+      margin-right: 40px;
+      font-size: 16px;
+      padding: 20px 40px;
+    }
+
+    .form__button {
+      height: fit-content;
+      margin: 0;
+      font-size: 16px;
+      padding: 15px 35px;
+    }
+  }
 `

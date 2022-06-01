@@ -1,5 +1,4 @@
 import React, { useRef, useEffect }  from "react";
-import Image from 'next/image';
 import styles from './styles.js';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -19,7 +18,7 @@ export default function Intro() {
       scrollTrigger: {
         trigger: logoRef.current,   
       }
-    });
+    }); 
 
     gsap.from(titleRef.current, {
       opacity: 0,
@@ -47,17 +46,20 @@ export default function Intro() {
         trigger: imageRef.current,   
       }
     });
-  });
+  }); 
 
   return (
     <div className='c-intro'>
-      <div className="intro__logo" ref={logoRef}>
-        <Image src="/logo-small.svg" width="60" height="60" objectFit="contain" />
+      <div className="intro__left">
+        <div className="intro__logo" ref={logoRef}>
+          <img src="/logo-small.svg" width="60" height="60" objectFit="contain"/>
+        </div> 
+        <h2 ref={titleRef}>Your music <span className="intro__green">release radar</span></h2>
+        <p ref={textRef}>Never miss new songs or albums by your favorite artists. Simply follow your favorite artists and get notified when new music is out. </p>
+        <p>Released is your personal release radar for new music, soon available in the App Store and Google Play Store. Sign up now to become a beta tester and get access on release.</p>
       </div>
-      <h2 ref={titleRef}>Released, is your <span className="intro__green">release</span> radar</h2>
-      <p ref={textRef}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis purus sed neque fringilla bibendum. Sed sit amet accumsan augue. Duis augue quam, dapibus at tellus vitae, tincidunt semper.</p>
       <div className="intro__image" ref={imageRef}>
-        <Image src="/notification.svg" width="270" height="93" objectFit="contain" />
+        <img src="/artist.png" width="140" height="auto" objectFit="contain"/>
       </div>
       <style jsx>
         {styles}
