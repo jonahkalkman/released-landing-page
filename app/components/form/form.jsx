@@ -36,7 +36,7 @@ export default function Form() {
   return (
     <div className='c-form' ref={formRef}>
       <form onSubmit={registerUser}>
-        <input className="form__input" id="email" type="text" autoComplete="email" required  placeholder="Enter your e-mail address..."/>
+        <input className="form__input" id="email" type="text" autoComplete="email" required  placeholder="Enter your e-mail..."/>
         <button 
           className={activeSubmit ? 'form__button form__button--active' : 'form__button'} 
           type="submit" 

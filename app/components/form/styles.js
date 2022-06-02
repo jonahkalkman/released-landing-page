@@ -60,7 +60,7 @@ export default css.global`
     }
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .c-form form {
       display: flex;
       flex-direction: row;

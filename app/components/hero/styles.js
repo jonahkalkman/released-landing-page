@@ -27,7 +27,11 @@ export default css.global`
     object-fit: contain;
   }
 
-  @media only screen and (min-width: 768px) {
+  .hero__right p  {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1024px) {
 
     .c-hero {
       display: flex;
@@ -48,6 +52,11 @@ export default css.global`
       order: 2;
       width: 50%;
       text-align: left;
+    }
+
+    .hero__right p  {
+      display: inline-block;
+      color: lightgray;
     }
 
     .hero__image {

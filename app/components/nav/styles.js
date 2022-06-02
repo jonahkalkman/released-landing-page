@@ -105,7 +105,7 @@ export default css.global`
     padding: 1rem 1rem;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .c-nav {
       justify-content: center;
     }

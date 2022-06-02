@@ -5,7 +5,7 @@ export default css.global`
     padding: 0 1rem;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .container {
       padding: 0 15rem;
     }
@@ -131,28 +131,19 @@ export default css.global`
   }
 
   .paralaxx-circle--first {
-    left: -40px;
-    width: 140;
-    height: 140;
-    z-index: 1;
-  }
 
-  .paralaxx-circle--second {
-    position: absolute;
-    border-radius: 50%;
-    width: 185px;
-    height: 185px;
-    background: linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%);
-    transform: rotate(73.92deg);
-    right: -40px;
+    left: -100px;
+    width: 350px;
+    height: 350px;
+    z-index: 0;
   }
 
   .paralaxx-circle--third {
     position: absolute;
-    right: 0px;
+    right: -100px;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background: linear-gradient(180deg, rgba(72, 201, 147, 0.7) 0%, rgba(72, 201, 147, 0) 100%);
     transform: rotate(-25.84deg);
   }

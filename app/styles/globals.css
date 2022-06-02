@@ -44,7 +44,7 @@ li {
   line-height: 37px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   h1, h2 {
     font-size: 50px;
     line-height: 56px;

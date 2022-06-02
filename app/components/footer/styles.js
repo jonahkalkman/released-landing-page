@@ -4,12 +4,18 @@ export default css.global`
   .c-footer {
     text-align: center;
     margin: 40px 0px 25px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
   }
   
   .footer__link {
     font-size: 12px;
     font-family: "MontserratRegular";
     margin-right: 25px;
+    color: lightgray;
   }
 
   .footer__link a {
@@ -28,13 +34,15 @@ export default css.global`
     margin: 0px 0px 13px 0px;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .c-footer {
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: left;
       margin-top: 200px;
+
+      flex-direction: row;
     }
 
     .footer__socials {

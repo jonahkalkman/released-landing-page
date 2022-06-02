@@ -73,7 +73,7 @@ export default css.global`
     color: #48C993;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .c-slider {
       margin-top: 111px;
     }
