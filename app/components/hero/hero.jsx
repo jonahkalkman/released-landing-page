@@ -3,12 +3,10 @@ import globalStyles from './styles.js';
 import Form from "../form/form.jsx";
 
 export default function Hero() {
-  const titleRef = useRef();
-
   return (
     <div className='c-hero'>
       <div className="hero__right">
-        <h1 className="hero__title" ref={titleRef}>
+        <h1 className="hero__title">
           Get notified when new <span className="green">music</span> is released
         </h1>
         <p>Sign up now to become an early member:</p>
