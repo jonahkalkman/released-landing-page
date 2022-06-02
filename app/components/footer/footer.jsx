@@ -6,9 +6,9 @@ import Image from 'next/image';
 export default function Footer() {
 
   return (
-    <footer className="c-footer" ref={footerRef}>
+    <footer className="c-footer">
       <span className="footer__link">
-        © Released - Your music release radar
+      © Released - Your music release radar
       </span>
       <div className="footer__socials">
         <Image src="/instagram.svg" width="20" height="20" objectFit="contain" />
