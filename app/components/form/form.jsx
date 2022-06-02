@@ -23,16 +23,6 @@ export default function Form() {
     // where we'll add our form logic
   }
 
-  useEffect(() => {
-    if(!activeSubmit) {
-      gsap.from(formRef.current, {  
-        opacity: 0,
-        y: '40',
-        duration: 1
-      });
-    }
-  });
-
   return (
     <div className='c-form' ref={formRef}>
       <form onSubmit={registerUser}>
