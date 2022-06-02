@@ -14,7 +14,6 @@ export default css.global`
   .footer__link {
     font-size: 12px;
     font-family: "MontserratRegular";
-    margin-right: 25px;
     color: lightgray;
   }
 
@@ -51,6 +50,7 @@ export default css.global`
     }
 
     .footer__link {
+      margin-right: 25px;
       color: #C4C4C4;
     }
   }

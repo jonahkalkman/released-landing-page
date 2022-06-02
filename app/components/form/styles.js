@@ -26,7 +26,7 @@ export default css.global`
     color: white;
     font-size: 14px;
     border-radius: 50px;
-    padding: 5px 25px;
+    padding: 10px 25px;
     border: none;
     font-family: "MontserratSemiBold";
     margin: 0 auto;
