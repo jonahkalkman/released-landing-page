@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import globalStyles from './styles.js';
 import { gsap } from "gsap";
-import Image from 'next/image';
 
 export default function Form() {
   const formRef = useRef();
@@ -37,7 +36,7 @@ export default function Form() {
   return (
     <div className='c-form' ref={formRef}>
       <form onSubmit={registerUser}>
-        <input className="form__input" id="email" type="text" autoComplete="email" required  placeholder="Enter your e-mail..."/>
+        <input className="form__input" id="email" type="text" autoComplete="email" required  placeholder="Enter your e-mail address..."/>
         <button 
           className={activeSubmit ? 'form__button form__button--active' : 'form__button'} 
           type="submit" 

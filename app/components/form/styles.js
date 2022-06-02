@@ -70,10 +70,11 @@ export default css.global`
     }
 
     .form__input {
+      width: fit-content;
       margin: 0;
       margin-right: 40px;
       font-size: 16px;
-      padding: 20px 40px;
+      padding: 20px 30px;
     }
 
     .form__button {

@@ -2,6 +2,7 @@ import css from 'styled-jsx/css'
 
 export default css.global`
   .c-hero {
+    width: 100%;
     text-align: center;
   }
 
@@ -20,6 +21,9 @@ export default css.global`
   }
 
   .hero__image img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
     object-fit: contain;
   }
 
@@ -30,7 +34,7 @@ export default css.global`
       margin-top: 50px;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     .hero__title {
@@ -48,6 +52,12 @@ export default css.global`
 
     .hero__image {
       order: 1;
+      margin-right: 20px;
+    }
+
+    .hero__image img {
+      height: 600px;
+      width: auto;
     }
   }
 `
