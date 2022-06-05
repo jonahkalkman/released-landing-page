@@ -23,7 +23,6 @@ export default css.global`
   .hero__image img {
     width: 100%;
     height: auto;
-    margin-top: 20px;
     object-fit: contain;
   }
 
