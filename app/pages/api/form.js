@@ -3,7 +3,7 @@ const { Client } = require("@sendgrid/client");
 
 export default function handler(req, res) {
   if (req.method === 'POST') {
-    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+    const SENDGRID_API_KEY = process.env.NEXT_PUBLIC_SENDGRID_API_KEY;
     console.log(SENDGRID_API_KEY);
     const client = new Client();
     sgMail.setApiKey(SENDGRID_API_KEY);
