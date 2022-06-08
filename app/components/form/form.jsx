@@ -6,9 +6,19 @@ export default function Form() {
   const formRef = useRef();
   const submitRef = useRef();
   const [submitText, setSubmitText] = useState('Join Beta');
+  const [email, setEmail] = useState();
   const [activeSubmit, setActiveSubmit] = useState(false);
 
   const registerUser = event => {
+    event.preventDefault();
+    fetch('/api/form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: email }),
+    });
+
     setActiveSubmit(true);
     setSubmitText('');
     gsap.to(submitRef.current, {
@@ -19,14 +29,16 @@ export default function Form() {
       border: 'solid 1px white',
       duration: 0.3
     });
-    event.preventDefault();
-    // where we'll add our form logic
+  }
+
+  const handleChange = (event) => {
+    setEmail({value: event.target.value});
   }
 
   return (
     <div className='c-form' ref={formRef}>
       <form onSubmit={registerUser}>
-        <input className="form__input" id="email" type="text" autoComplete="email" required  placeholder="Enter your e-mail..."/>
+        <input onChange={handleChange} className="form__input" id="email" type="text" autoComplete="email" required placeholder="Enter your e-mail..."/>
         <button 
           className={activeSubmit ? 'form__button form__button--active' : 'form__button'} 
           type="submit" 
