@@ -11,8 +11,8 @@ export default function Footer() {
       © Released - Your music release radar
       </span>
       <div className="footer__socials">
-        <Image src="/instagram.svg" width="20" height="20" objectFit="contain" />
-        <Image src="/twitter.svg" width="20" height="20" objectFit="contain" />
+        <a href="https://www.instagram.com/released.app/"><Image src="/instagram.svg" width="20" height="20" objectFit="contain" /></a>
+        <a href="https://twitter.com/released_app"><Image src="/twitter.svg" width="20" height="20" objectFit="contain" /></a>
       </div>
       <style jsx global>
         {globalStyles}
