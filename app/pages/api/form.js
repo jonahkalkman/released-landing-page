@@ -28,7 +28,7 @@ export default function handler(req, res) {
       from: 'info@released-app.com',
       subject: 'Welcome to Released! 👋',
       text: 'Hi! Thanks for joining Released as a beta tester. You are now on the list of our testers. As soon as the app is ready we will send you a personal invite to test Released.',
-      html: '<p>Hi!</p><p>Thanks for joining Released as a beta tester 🎵. You are now on the list of our testers. As soon as the app is ready we will send you a personal invite to test Released.</p><p>Greetings, <br />Team Released</p>',
+      html: '<p>Hi!</p><p>Thanks for joining Released as a beta tester. You are now on the list of our testers. As soon as the app is ready, we will send you a personal invite to test Released.</p><p>Greetings, <br />Team Released</p>',
     };
 
     sgMail.send(msg)
